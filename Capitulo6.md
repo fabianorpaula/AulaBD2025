@@ -84,7 +84,7 @@ SET `id_classe` = 3
 WHERE `Nome` = 'Kael';
 ```
 
-### 5) Conferir com consultas simples (ainda sem JOIN)
+### 5) Conferir com consultas simples
 ```sql
 -- Ver todas as classes
 SELECT * FROM `classe`;
@@ -102,8 +102,7 @@ WHERE `id_classe` IS NULL;
 
 ---
 
-## 📝 Tarefas de Assimilação — Capítulo 6 (sem JOIN)
-> **Faça as perguntas primeiro e depois confira as respostas.**  
+## 📝 Tarefas de Assimilação — Capítulo 6  
 > **Reforço:** Não recrie `personagem`. Apenas altere o que for pedido e trabalhe com a nova tabela `classe`.
 
 1. Crie a tabela `classe` com PK `id_classe` (auto incremento, unsigned).
@@ -113,7 +112,7 @@ WHERE `id_classe` IS NULL;
 5. Crie a **FK** `fk_personagem_classe` ligando `personagem.id_classe` a `classe.id_classe` com `ON DELETE SET NULL` e `ON UPDATE CASCADE`.
 6. Atribua `id_classe = 1` para um personagem à sua escolha usando `WHERE Nome = ...`.
 7. Atribua `id_classe = 2` para um personagem **Humano** específico (escolha pelo `Nome`).
-8. Liste apenas `id_personagem`, `Nome` e `id_classe` dos personagens que **já têm** classe definida (sem JOIN).
+8. Liste apenas `id_personagem`, `Nome` e `id_classe` dos personagens que **já têm** classe definida.
 9. Liste os personagens que **ainda não têm** `id_classe` definida.
 10. Insira mais **duas** novas classes de sua preferência e mostre o conteúdo completo da tabela `classe` novamente.
 
