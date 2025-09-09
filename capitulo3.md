@@ -36,47 +36,7 @@ WHERE Nome = 'Aria';
 
 ---
 
-## 📝 Tarefas de Assimilação — Capítulo 3
 
-1. Adicione à tabela `personagem` a coluna `Mana` do tipo INT.  
-2. Adicione a coluna `Agilidade` do tipo INT à tabela `personagem`.  
-3. Explique a diferença entre `ALTER TABLE` e `CREATE TABLE`.  
-4. Por que usamos `NOT NULL` ao adicionar novas colunas?  
-5. Qual comando usamos para remover uma coluna de uma tabela?  
-6. Adicione uma coluna chamada `Classe` do tipo VARCHAR(30).  
-7. Atualize todos os personagens para terem `Vida = 100`.  
-8. Atualize apenas os personagens da Raça = 'Orc' para terem `Força = 30`.  
-9. Explique o risco de usar `UPDATE` sem `WHERE`.  
-10. Por que é importante planejar bem os atributos antes de criar ou alterar tabelas?  
-
----
-
-## ✅ Respostas esperadas
-
-1. ```sql
-   ALTER TABLE personagem ADD COLUMN Mana INT NOT NULL;
-   ```
-2. ```sql
-   ALTER TABLE personagem ADD COLUMN Agilidade INT NOT NULL;
-   ```
-3. `CREATE TABLE` cria uma tabela nova; `ALTER TABLE` modifica uma já existente.  
-4. Para garantir que todos os registros tenham um valor válido.  
-5. ```sql
-   ALTER TABLE personagem DROP COLUMN NomeDaColuna;
-   ```
-6. ```sql
-   ALTER TABLE personagem ADD COLUMN Classe VARCHAR(30) NOT NULL;
-   ```
-7. ```sql
-   UPDATE personagem SET Vida = 100;
-   ```
-8. ```sql
-   UPDATE personagem SET Força = 30 WHERE Raça = 'Orc';
-   ```
-9. Ele modifica **todas as linhas** da tabela, podendo causar erros graves.  
-10. Porque mudanças estruturais podem impactar dados existentes e performance.  
-
----
 
 ✍️ Produzido por **Professor Fabiano de Paula**  
 🔗 GitHub — [fabianorpaula](https://github.com/fabianorpaula)
